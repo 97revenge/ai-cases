@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"locales\\\\client.ts -> ./en\":{\"id\":\"locales\\\\client.ts -> ./en\",\"files\":[\"static/chunks/_app-pages-browser_locales_en_ts.js\"]},\"locales\\\\client.ts -> ./pt\":{\"id\":\"locales\\\\client.ts -> ./pt\",\"files\":[\"static/chunks/_app-pages-browser_locales_pt_ts.js\"]}}"
