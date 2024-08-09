@@ -61,34 +61,44 @@ export default async function ContainerPage() {
         </div>
       </header>
       <main className="container mx-auto my-12 flex max-w-3xl flex-1 flex-col items-center px-4 md:px-6">
-        <article className="prose prose-gray dark:prose-invert">
+        <article className="space-y-4 prose prose-gray dark:prose-invert">
           <TitlePage>{t("title")}</TitlePage>
-          <DateComponent>{t("date")}August 24, 2024</DateComponent>
+          {/* API de datas dou um timeSprint no em um db  */}
+          <DateComponent>{t("date")}null data </DateComponent>
 
           <p>
-            Once upon a time, in a far-off land, there was a very lazy king who
-            spent all day lounging on his throne. One day, his advisors came to
-            him with a problem: the kingdom was running out of money.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, a
+            possimus rerum natus suscipit voluptatum numquam amet, esse odio
+            perferendis porro enim cupiditate ipsam rem fugiat aliquid aliquam
+            ut eveniet!
           </p>
           <p>
-            Jokester began sneaking into the castle in the middle of the night
-            and leaving jokes all over the place: under the king&apos;s pillow,
-            in his soup, even in the royal toilet. The king was furious, but he
-            couldn&apos;t seem to stop Jokester.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A impedit
+            corporis libero dignissimos, quam quae quasi earum facilis explicabo
+            magni eius, ullam nostrum iure illo est dolorum consequuntur, nobis
+            excepturi!
           </p>
           <p>
-            And then, one day, the people of the kingdom discovered that the
-            jokes left by Jokester were so funny that they couldn&apos;t help
-            but laugh. And once they started laughing, they couldn&apos;t stop.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus
+            accusantium beatae quae consequatur molestias ab quaerat, enim
+            deserunt aliquam vitae! Perferendis dignissimos deserunt molestiae
+            accusantium odio soluta, neque ipsam! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Velit minus accusantium beatae quae
+            consequatur molestias ab quaerat, enim deserunt aliquam vitae!
+            Perferendis dignissimos deserunt molestiae accusantium odio soluta,
+            neque ipsam!
           </p>
           <blockquote>
-            &ldquo;After all,&rdquo; he said, &ldquo;everyone enjoys a good
-            joke, so it&apos;s only fair that they should pay for the
-            privilege.&rdquo;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            saepe sit nesciunt totam magnam ab distinctio libero laborum
+            asperiores veritatis impedit non voluptatibus, modi enim obcaecati
+            quaerat omnis repudiandae sunt.
           </blockquote>
           <p>
-            The king thought long and hard, and finally came up with a brilliant
-            plan: he would tax the jokes in the kingdom.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            praesentium eligendi consequuntur autem magnam, non perspiciatis,
+            porro placeat reprehenderit provident vel, molestiae harum nisi
+            voluptates minima ullam beatae aliquam repellendus!
           </p>
         </article>
       </main>

@@ -1,5 +1,5 @@
 export default {
-  'title': 'Defining Artificial Intelligence on labor rights with Hugging Face',
+  'title': 'Defining Artificial Intelligence on brazillian consumer protection code with Hugging Face',
   "date": "Published on"
 
 } as const
