@@ -1,11 +1,22 @@
 "use server"
 
-export const translate = () => {
+import { getI18n } from "@/locales/server";
 
+export const translate = async () => {
 
-  const content: any[] = []
+  const t = await getI18n();
 
+  return {
+    title: t("title"),
+    date: t("date"),
 
-  return content
+    response: [
+      t("P_01"),
+      t("P_02"),
+      t("P_03"),
+      t("P_04"),
+      t("P_05"),
+    ]
+  }
 
 }

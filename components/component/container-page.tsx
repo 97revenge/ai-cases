@@ -12,9 +12,13 @@ import { TitlePage } from "./title-page";
 import { DateComponent } from "./date-component";
 import AnimatedGradientTextDemo from "./animated-gradient";
 import { translate } from "@/app/[locale]/rights/actions";
+import { TextPage } from "./text-page";
+import * as pt from "../../locales/pt";
 
 export default async function ContainerPage() {
   const t = await getI18n();
+
+  const { response, date, title } = await translate();
 
   return (
     <>
@@ -39,48 +43,20 @@ export default async function ContainerPage() {
           </header>
           <main className="container mx-auto my-12 flex max-w-3xl flex-1 flex-col items-center px-4 md:px-6">
             <article className="space-y-4 prose prose-gray dark:prose-invert">
-              <TitlePage>{t("title")}</TitlePage>
-              {/* API de datas dou um timeSprint no em um db  */}
-              <DateComponent>{t("date")}null data </DateComponent>
+              <TitlePage>{title}</TitlePage>
+              {/* API de datas ou timeSprint  em um db  */}
+              <DateComponent>{date}null data </DateComponent>
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-                a possimus rerum natus suscipit voluptatum numquam amet, esse
-                odio perferendis porro enim cupiditate ipsam rem fugiat aliquid
-                aliquam ut eveniet!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                impedit corporis libero dignissimos, quam quae quasi earum
-                facilis explicabo magni eius, ullam nostrum iure illo est
-                dolorum consequuntur, nobis excepturi!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                minus accusantium beatae quae consequatur molestias ab quaerat,
-                enim deserunt aliquam vitae! Perferendis dignissimos deserunt
-                molestiae accusantium odio soluta, neque ipsam! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Velit minus
-                accusantium beatae quae consequatur molestias ab quaerat, enim
-                deserunt aliquam vitae! Perferendis dignissimos deserunt
-                molestiae accusantium odio soluta, neque ipsam!
-              </p>
-              <blockquote>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur, saepe sit nesciunt totam magnam ab distinctio libero
-                laborum asperiores veritatis impedit non voluptatibus, modi enim
-                obcaecati quaerat omnis repudiandae sunt.
-              </blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                praesentium eligendi consequuntur autem magnam, non
-                perspiciatis, porro placeat reprehenderit provident vel,
-                molestiae harum nisi voluptates minima ullam beatae aliquam
-                repellendus!
-              </p>
+              {response.map((item: any) => {
+                return (
+                  <>
+                    <TextPage>{item}</TextPage>
+                  </>
+                );
+              })}
             </article>
           </main>
-          <footer className="bg-muted p-6 md:py-12 w-full">
+          <footer className="mt-12 bg-muted p-6 md:py-12 w-full">
             <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
               <div className="grid gap-1">
                 <h3 className="font-semibold">Company</h3>
