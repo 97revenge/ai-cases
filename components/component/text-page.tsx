@@ -7,9 +7,7 @@ import Markdown from "react-markdown";
 import { FadeDown } from "./animation-fadeup";
 
 export const TextPage = ({ ...props }) => {
-  const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0.5,
-  });
+  const { isIntersecting, ref } = useIntersectionObserver();
 
   return (
     <>
@@ -17,7 +15,7 @@ export const TextPage = ({ ...props }) => {
         {isIntersecting === true ? (
           <>
             <FadeDown>
-              <p>
+              <p className="h-full min-h-[65px] ">
                 <Markdown {...props}></Markdown>
               </p>
             </FadeDown>
