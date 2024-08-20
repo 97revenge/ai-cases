@@ -16,7 +16,20 @@ export const translate = async () => {
       t("P_03"),
       t("P_04"),
       t("P_05"),
-    ]
+    ],
+    //     model: [
+    //       t("title_1"),
+    //       t("P_1.model")
+    //       t("P_2.model")
+    //       t("P_3.model")
+    //     ]
+    // modelBody: [
+    //       t("title_10"),
+    //       t("P_1.modelBody"),
+    //       t("P_2.modelBody"),
+    //       t("P_3.modelBody")
+    //     ]
+
   }
 
 }

@@ -1,23 +1,13 @@
-import { getScopedI18n, getI18n } from "@/locales/server";
-import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from "@/components/ui/navigation-menu";
+import { getI18n } from "@/locales/server";
 import { SwitchTheme } from "./swith-theme";
 import { JSX, SVGProps } from "react";
 import { TitlePage } from "./title-page";
 import { DateComponent } from "./date-component";
-import AnimatedGradientTextDemo from "./animated-gradient";
 import { translate } from "@/app/[locale]/rights/actions";
 import { TextPage } from "./text-page";
-import * as pt from "../../locales/pt";
-import { YouTubeEmbed } from "react-social-media-embed";
 import { YoutubeEmbed } from "./youtube-embed";
-import { GlobeComponent } from "./globe-component";
 import { TextRevealDemo } from "./text-reveal";
+import { EmailFooter } from "./email-footer";
 
 export default async function ContainerPage() {
   const t = await getI18n();
@@ -72,7 +62,7 @@ export default async function ContainerPage() {
                 );
               })}
             </article>
-            <div className="my-6">
+            <div className="my-6 shadow-0">
               <TextRevealDemo />
             </div>
             <article className="space-y-4 prose prose-gray dark:prose-invert">
@@ -85,25 +75,7 @@ export default async function ContainerPage() {
               })}
             </article>
           </main>
-          <footer className="mt-12 bg-muted p-6 md:py-12 w-full">
-            <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
-              <div className="grid gap-1">
-                <h3 className="font-semibold">Company</h3>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="font-semibold">Products</h3>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="font-semibold">Resources</h3>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="font-semibold">Legal</h3>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="font-semibold">Contact</h3>
-              </div>
-            </div>
-          </footer>
+          <EmailFooter />
         </div>
       </data>
     </>
